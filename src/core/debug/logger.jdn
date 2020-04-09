@@ -1,0 +1,12 @@
+#include "Logger.h"
+
+using std;
+
+implement Logger {
+  Logger(String s) {
+    File f = new File(s->concat(".log"));
+    if(!f->exists()) f->create();
+    this->writer = new FileWriter(f);
+    this->name = s;
+  }
+}
